@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 120px 0;
+}
+
+.offers__container {
+    width: 1232px;
+    margin: 120px auto;
+}
+
+.offers__container h2 {
+    color: #383838;
+    font-size: 40px;
+    line-height: 47px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.offers__line {
+    width: 100px;
+    height: 4px;
+    background-color: #F5BD41;
+    display: inline-block;
+    margin-bottom: 80px;
+}
+
+.offered__items {
+    display: flex;
+    justify-content: center;
+    margin: 0 -8px;
+}
+
+.offer__item {
+    padding: 0 8px;
+}
+
+.offer__item img {
+    margin-bottom: 48px;
+}
+
+.offer__item p {
+    font-size: 24px;
+    font-weight: 400;
+}

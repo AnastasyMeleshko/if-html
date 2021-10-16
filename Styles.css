@@ -38,11 +38,11 @@ section {
 
 .offered__items {
     display: flex;
+    justify-content: center;
     margin: 0 -8px;
 }
 
 .offer__item {
-    width: 25%;
     padding: 0 8px;
 }
 

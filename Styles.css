@@ -12,7 +12,7 @@ body {
 
 .offers {
     background-color: #FFFFFF;
-    padding: 120px 0px;
+    padding: 120px 0;
 }
 
 .offers__container {
@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0 -8px;
-    padding: 0px 140px;
+    padding: 0 140px;
 }
 
 .offer__item {
@@ -59,16 +59,15 @@ body {
 
 .homes {
     background-color: #EAF0F9;
-    padding: 120px 0px;
+    padding: 120px 0;
     display: flex;
     flex-direction: column;
 }
 
 .homes__container {
-    margin: 0px 105px;
-    width: 1440px;
+    margin: 0 105px;
+    max-width: 1440px;
     align-self: center;
-    position: relative;
 }
 
 .homes__title {
@@ -83,6 +82,7 @@ body {
 .homes__group-items {
     display: flex;
     justify-content: center;
+    position: relative;
 
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 .homes__item:nth-child(4) {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .homes__item p {
@@ -102,7 +102,7 @@ body {
 
 .homes-item__img {
     margin-bottom: 24px;
-    height: 296px;
+    min-height: 296px;
 }
 
 .homes-item__title {
@@ -139,8 +139,8 @@ body {
 
 .arrow__wrapper {
     position: absolute;
-    top: 50%;
-    left: 91.5%;
+    right: -19px;
+    top: 135px;
     z-index: 1;
 }
 

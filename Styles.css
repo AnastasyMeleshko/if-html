@@ -11,7 +11,7 @@ body {
 
 section {
     background-color: #FFFFFF;
-    padding: 120px 0;
+    padding: 120px 0px;
 }
 
 .offers__container {
@@ -38,8 +38,9 @@ section {
 
 .offered__items {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 -8px;
+    padding: 0px 140px;
 }
 
 .offer__item {

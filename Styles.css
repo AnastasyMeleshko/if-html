@@ -7,11 +7,12 @@
 body {
     font-family: 'Roboto';
     text-align: center;
+    box-sizing: border-box;
 }
 
-section {
+.offers {
     background-color: #FFFFFF;
-    padding: 120px 0px;
+    padding: 120px 0;
 }
 
 .offers__container {
@@ -40,7 +41,7 @@ section {
     display: flex;
     justify-content: space-between;
     margin: 0 -8px;
-    padding: 0px 140px;
+    padding: 0 140px;
 }
 
 .offer__item {
@@ -55,3 +56,91 @@ section {
     font-size: 24px;
     font-weight: 400;
 }
+
+.homes {
+    background-color: #EAF0F9;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.homes__container {
+    margin: 0 105px;
+    max-width: 1440px;
+    align-self: center;
+}
+
+.homes__title {
+    color: #383838;
+    font-size: 40px;
+    line-height: 47px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 105px;
+}
+
+.homes__group-items {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.homes__item {
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.homes__item:nth-child(4) {
+    margin-right: 0;
+}
+
+.homes__item p {
+    align-self: flex-start;
+}
+
+.homes-item__img {
+    margin-bottom: 24px;
+    min-height: 296px;
+}
+
+.homes-item__title {
+    margin-bottom: 24px;
+    color: #3077C6;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.homes-item__location {
+    font-weight: 400;
+    color: #BFBFBF;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.arrow__element {
+    display: flex;
+    background-color: #F3F3F4;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5)
+
+}
+
+.arrow__element img {
+    height: 15px;
+}
+
+.arrow__wrapper {
+    position: absolute;
+    right: -19px;
+    top: 135px;
+    z-index: 1;
+}
+

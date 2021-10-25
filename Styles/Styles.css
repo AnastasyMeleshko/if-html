@@ -330,3 +330,61 @@ html, body {
     text-align: left;
     margin: 0 24px 24px 24px;
 }
+
+.footer {
+    background-color: #10367C;
+    color: #FFFFFF;
+}
+
+.footer-main-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-items-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 64px;
+}
+.footer-item{
+    width: 33.33%;
+    text-align: left;
+    margin: 0 8px;
+}
+
+.footer-item:last-child {
+    margin-right: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer li {
+    list-style-type: none;
+    margin-bottom: 24px;
+}
+
+.footer li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-text {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: 400;
+    align-self: flex-start;
+}

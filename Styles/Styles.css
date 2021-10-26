@@ -12,6 +12,11 @@ html, body {
     text-align: center;
 }
 
+:root {
+    --homes-img-height: calc(296px - 24px);
+    --reviews-img-height: 400px;
+}
+
 .container {
     max-width: 1264px;
     padding: 120px 16px;
@@ -42,7 +47,6 @@ html, body {
 .offered-items {
     display: flex;
     justify-content: center;
-    padding: 0 140px;
 }
 
 .offer-item {
@@ -129,7 +133,8 @@ html, body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5)
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
 }
 
 .arrow-element img {
@@ -139,15 +144,9 @@ html, body {
 .arrow-homes {
     position: absolute;
     right: 0;
-    top: 33.33%;
+    top: calc(var(--homes-img-height)/2);
     z-index: 1;
     transform: translateX(50%);
-}
-
-.reviews-container {
-    max-width: 1264px;
-    margin: 0 auto;
-    padding: 0 16px;
 }
 
 .review-title {
@@ -161,8 +160,6 @@ html, body {
 
 .reviews {
     background-color: #FFFFFF;
-    padding-top: 120px;
-    margin-bottom: 120px;
 }
 
 .review-main-wrapper {
@@ -188,7 +185,7 @@ html, body {
     position: absolute;
     z-index: 1;
     right: 0;
-    top: 25%;
+    top: calc(var(--reviews-img-height)/2);
     transform: translateX(50%);
 
 }
@@ -213,9 +210,7 @@ html, body {
     z-index: 1;
     left: 0;
     bottom: 0;
-    /*top: 352px;*/
     width: 100%;
-
 }
 
 .review-item-amount {
@@ -336,23 +331,18 @@ html, body {
     color: #FFFFFF;
 }
 
-.footer-main-wrap {
-    display: flex;
-    flex-direction: column;
-}
-
 .footer-items-wrapper {
     display: flex;
-    flex-direction: row;
     margin-bottom: 64px;
 }
-.footer-item{
+
+.footer-items-wrapper ul  {
     width: 33.33%;
     text-align: left;
     margin: 0 8px;
 }
 
-.footer-item:last-child {
+.footer-items-wrapper ul:last-child {
     margin-right: 0;
 }
 
@@ -386,5 +376,5 @@ html, body {
     line-height: 17px;
     font-style: normal;
     font-weight: 400;
-    align-self: flex-start;
+    text-align:left;
 }

@@ -13,7 +13,9 @@ html, body {
 }
 
 :root {
-    --homes-img-height: calc(296px - 24px);
+    --homes-img-height: 296px;
+    --homes-arrow-height: 40px;
+    --reviews-arrow-height: 40px;
     --reviews-img-height: 400px;
 }
 
@@ -144,9 +146,9 @@ html, body {
 .arrow-homes {
     position: absolute;
     right: 0;
-    top: calc(var(--homes-img-height)/2);
+    top: calc((var(--homes-img-height) - var(--homes-arrow-height))/2);
     z-index: 1;
-    transform: translateX(50%);
+    transform: translateX(60%);
 }
 
 .review-title {
@@ -185,9 +187,8 @@ html, body {
     position: absolute;
     z-index: 1;
     right: 0;
-    top: calc(var(--reviews-img-height)/2);
+    top: calc((var(--reviews-img-height) - var(--reviews-arrow-height))/2);
     transform: translateX(50%);
-
 }
 
 .review-item {

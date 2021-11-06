@@ -156,8 +156,8 @@ h1 {
     left: -462px;
 }
 
-.form-input:focus ~ .form-label{
-/*.form-input:not(:focus):valid ~ .form-label */
+.form-input:focus ~ .form-label,
+.form-input:valid + .form-label {
     position: absolute;
     top: -50px;
     color: #FFFFFF;

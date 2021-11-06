@@ -27,52 +27,41 @@
                   </header>
                   <div class="main-header-content">
                       <h1>Discover stays<br>to live, work or just relax</h1>
-                      <form action="" class="form-main">
-                          <div class="form-border"></div>
-                              <div class="form-wrapper">
-                                      <div class="form-destination form-content">
-                                          <div class="label-block">
-                                              <label class="label-destination" for="user-destination">Your destination or hotel name</label>
-                                          </div>
-                                          <div class="input-block">
-                                              <input type="text" id="user-destination" class="user-destination" name="user-destination" value="Your destination or hotel name">
-                                          </div>
+                              <form action="" class="form-main">
+                                      <div class="form-destination form-item">
+                                          <input type="text" id="user-destination" class="form-input input-destination" name="user-destination">
+                                          <label class="form-label label-destination" for="user-destination">Your destination or hotel name</label>
                                       </div>
-                                  <div class="form-end-container">
-                                      <div class="form-dates form-content">
-                                          <div class="label-block">
-                                              <label for="form-user-check-in">Check-in</label>
-                                              <span class="span-user-dates">-</span>
-                                              <label for="form-user-check-out">Check-out</label>
+                                      <div class="left-container">
+                                          <div class="form-dates">
+                                              <div class="form-item check-inn">
+                                                  <input type="text" class="form-input input-date" name="user-check-in-date" id="form-user-check-in">
+                                                  <label class="form-label label-inn" for="form-user-check-in">Check-in</label>
+                                              </div>
+                                              <div class="form-item check-out">
+                                                  <input type="text" class="form-input input-date" name="user-check-out-date" id="form-user-check-out">
+                                                  <label class="form-label label-out" for="form-user-check-out">Check-out</label>
+                                              </div>
                                           </div>
-                                          <div class="input-block">
-                                              <input type="text" class="input-date" name="user-check-in-date" id="form-user-check-in" value="Check-in">
+                                          <div class="form-numbers" tabindex="0">
+                                              <div>
+                                                  <span>2</span>
+                                                  <span>Adults</span>
+                                              </div>
                                               <span>-</span>
-                                              <input type="text" class="input-date" name="user-check-out-date" id="form-user-check-out" value="Check-out">
+                                              <div>
+                                                  <span>3</span>
+                                                  <span>Children</span>
+                                              </div>
+                                              <span>-</span>
+                                              <div>
+                                                  <span>4</span>
+                                                  <span>Rooms</span>
+                                              </div>
                                           </div>
-                                      </div>
-                                      <div class="form-numbers form-content">
-                                          <div>
-                                              <span>2</span>
-                                              <span>Adults</span>
-                                          </div>
-                                          <span>-</span>
-                                          <div>
-                                              <span>3</span>
-                                              <span>Children</span>
-                                          </div>
-                                          <span>-</span>
-                                          <div>
-                                              <span>4</span>
-                                              <span>Rooms</span>
-                                          </div>
-                                      </div>
-                                      <div class="button">
-                                          <button class="search-button" name="Search" type="submit">Search</button>
-                                      </div>
-                                  </div>
-                              </div>
-                      </form>
+                                      <button class="search-button" name="Search" type="submit">Search</button>
+                                    </div>
+                              </form>
                       <div class="header-download-app">
                           <a href="#" target="_blank"><img src="img/Google-play.png" alt="Google-play"></a>
                           <a href="#" target="_blank"><img src="img/App-store.png" alt="App-store"></a>

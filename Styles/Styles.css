@@ -53,6 +53,12 @@ html, body {
     left: 0;
 }
 
+.logo {
+     height: 40px;
+     width: 205px;
+     fill: #3077C6;
+}
+
 .header-nav {
     display: flex;
     justify-content: space-between;
@@ -105,6 +111,18 @@ html, body {
 .header-icons {
     display: flex;
     align-items: flex-start;
+}
+
+.night-icon {
+    height: 30px;
+    width: 30px;
+    fill: #FFFFFF;
+}
+
+.account-icon {
+    height: 40px;
+    width: 40px;
+    fill: #FFFFFF;
 }
 
 .header-icons a {
@@ -334,10 +352,11 @@ h1 {
     padding: 0 -8px;
 }
 
-.offer-item img {
-    margin-bottom: 48px;
+.offer-icon {
     max-width: 100px;
     max-height: 100px;
+    margin-bottom: 48px;
+    fill: #3077C6;
 }
 
 .offer-item p {
@@ -415,6 +434,13 @@ h1 {
 
 .arrow-element img {
     height: 15px;
+}
+
+.arrow-icon {
+    height: 15px;
+    stroke: #383838;
+    stroke-width: 2;
+    fill: none;
 }
 
 .arrow-homes {
@@ -563,6 +589,13 @@ h1 {
     margin-right: 16px;
 }
 
+.review-item-icon {
+    height: 54px;
+    width: 54px;
+    fill: #BFBFBF;
+    margin-right: 5px;
+}
+
 .review-item-person {
     display: flex;
     flex-direction: column;
@@ -580,6 +613,13 @@ h1 {
 }
 
 .review-item-country {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.review-item-country p {
     color: #BFBFBF;
     font-size: 18px;
     line-height: 21px;
@@ -587,8 +627,16 @@ h1 {
     font-weight: 400;
 }
 
+
 .review-item-country img {
     height: 13px;
+
+}
+
+.flag-icon {
+    height: 13px;
+    width: 15px;
+    margin-right: 3px;
 }
 
 .review-message-wrapper {

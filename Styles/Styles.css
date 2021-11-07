@@ -655,6 +655,14 @@ h1 {
     color: #FFFFFF;
 }
 
+.footer-logo {
+    fill: #FFFFFF;
+    height: 19px;
+    width: 98px;
+    text-align: center;
+    display: none;
+}
+
 .footer-items-wrapper {
     display: flex;
     margin-bottom: 64px;
@@ -722,6 +730,75 @@ h1 {
     .col-xs-10 {width: calc(100% / var(--column-count) * 10);}
     .col-xs-11 {width: calc(100% / var(--column-count) * 11);}
     .col-xs-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .offered-items {
+        flex-wrap: wrap;
+    }
+
+    .offer-item {
+        margin-bottom: 32px;
+    }
+
+    .offer-item p {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .offer-icon {
+        margin-bottom: 16px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .offers-line {
+        display: none;
+    }
+
+    .offers-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .offers-container h2 {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 32px;
+    }
+
+    .footer-items-wrapper {
+        margin-bottom: 32px
+    }
+
+    .footer-item li {
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-item li:not(:first-child) {
+        display: none;
+        transition: 0.5s;
+    }
+
+    .footer-logo {
+        display: flex;
+        transition: 0.5s;
+        margin: 0 auto 40px;
+        width: 98px;
+        height: 19px;
+    }
+
+    .footer-main-wrap {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        line-height: 1.143em;
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -738,10 +815,80 @@ h1 {
     .col-sm-10 {width: calc(100% / var(--column-count) * 10);}
     .col-sm-11 {width: calc(100% / var(--column-count) * 11);}
     .col-sm-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .offered-items {
+        flex-wrap: wrap;
+    }
+
+    .offer-item {
+        margin-bottom: 32px;
+    }
+
+    .offer-item p {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .offer-icon {
+        margin-bottom: 16px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .offers-line {
+        display: none;
+    }
+
+    .offers-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .offers-container h2 {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 32px;
+    }
+
+    .footer-items-wrapper {
+        margin-bottom: 32px
+    }
+
+    .footer-item li {
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-item li:not(:first-child) {
+        display: none;
+        transition: 0.5s;
+    }
+
+    .footer-logo {
+        display: flex;
+        transition: 0.5s;
+        margin: 0 auto 40px;
+        width: 98px;
+        height: 19px;
+    }
+
+    .footer-main-wrap {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        line-height: 1.143em;
+        text-align: center;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
-    /* For medium devices (md) 768px-1030px */
+    /* For medium devices (md) 768px-1035px */
     .col-md-1 {width: calc(100% / var(--column-count) * 1);}
     .col-md-2 {width: calc(100% / var(--column-count) * 2);}
     .col-md-3 {width: calc(100% / var(--column-count) * 3);}
@@ -755,13 +902,81 @@ h1 {
     .col-md-11 {width: calc(100% / var(--column-count) * 11);}
     .col-md-12 {width: calc(100% / var(--column-count) * 12);}
 
-    .offer-item {
+    .offered-items {
         flex-wrap: wrap;
     }
+
+    .offer-item {
+        margin-bottom: 48px;
+    }
+
+    .offer-item p {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .offer-icon {
+        margin-bottom: 30px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .offers-line {
+        display: inline-block;
+    }
+
+    .offers-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .offers-container h2 {
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .footer-item li {
+        font-size: 18px;
+        line-height: 1.15em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-items-wrapper {
+        margin-bottom: 48px
+    }
+
+    .footer-item li:not(:first-child) {
+        display: display: flex;
+        transition: 0.5s;
+    }
+
+    .footer-logo {
+        display: flex;
+        transition: 0.5s;
+        margin: 0 auto 40px;
+        width: 156px;
+        height: 30px;
+        transition: 0.5s;
+    }
+
+    .footer-main-wrap {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        line-height: 1.143em;
+        text-align: center;
+        transition: 0.5s;
+    }
+
 }
 
-@media only screen and (min-width: 1030px) {
-    /* For large devices (lg) 1030px - and > */
+@media only screen and (min-width: 1035px) {
+    /* For large devices (lg) 1035px - and > */
     .col-lg-1 {width: calc(100% / var(--column-count) * 1);}
     .col-lg-2 {width: calc(100% / var(--column-count) * 2);}
     .col-lg-3 {width: calc(100% / var(--column-count) * 3);}
@@ -774,5 +989,71 @@ h1 {
     .col-lg-10 {width: calc(100% / var(--column-count) * 10);}
     .col-lg-11 {width: calc(100% / var(--column-count) * 11);}
     .col-lg-12 {width: calc(100% / var(--column-count) * 12);}
+
+    .offered-items {
+        flex-wrap: nowrap;
+    }
+
+    .offer-item {
+        margin-bottom: 0;
+    }
+
+    .offer-item p {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .offer-icon {
+        margin-bottom: 48px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .offers-line {
+        display: inline-block;
+    }
+
+    .offers-container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .offers-container h2 {
+        font-size: 40px;
+        line-height: 47px;
+        margin-bottom: 20px;
+    }
+
+    .footer-items-wrapper {
+        margin-bottom: 64px
+    }
+
+    .footer-item li {
+        font-size: 20px;
+        line-height: 1.15em;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footer-item li:not(:first-child) {
+        display: flex;
+        transition: 0.5s;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .footer-main-wrap {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        line-height: 1.143em;
+        text-align: left;
+    }
+
 }
 

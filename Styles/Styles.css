@@ -6,6 +6,7 @@
     --reviews-arrow-height: 40px;
     --reviews-img-height: 400px;
     --column-count: 12;
+    --container-max-width: 1264px;
 }
 
 * {
@@ -21,9 +22,42 @@ html, body {
 }
 
 .container {
-    max-width: 1264px;
+    max-width: var(--container-max-width);
     padding: 120px 16px;
     margin: 0 auto;
+}
+
+.container > h2 {
+    position: relative;
+    color: #383838;
+    font-size: 40px;
+    line-height: 47px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 105px;
+
+}
+
+.container h2:after {
+    content: "";
+    width: 2.5em;
+    height: 4px;
+    background-color: #F5BD41;
+    margin-bottom: 80px;
+    display: none;
+    position: absolute;
+    top: calc(1em + 20px);
+    left: calc(50% - 2.5em/2);
+    opacity: 0;
+    transition: ease opacity 0.3s;
+    transition-delay: .0s;
+}
+
+.container h2:hover:after {
+    display: flex;
+    margin: 0 auto;
+    opacity: 1;
+    transition-delay: .5s;
 }
 
 .top-section {
@@ -96,10 +130,15 @@ html, body {
     position: absolute;
     left: 8%;
     bottom: 0;
+    opacity: 0;
+    transition: ease opacity 0.3s;
+    transition-delay: .0s;
 }
 
 .header-item:hover:after {
     display: block;
+    opacity: 1;
+    transition-delay: .5s;
 }
 
 .header-icons {
@@ -172,6 +211,7 @@ h1 {
     position: absolute;
     top: -50px;
     color: #FFFFFF;
+    transition: ease 0.3s;
 }
 
 .form-input:focus, .form-numbers:focus {
@@ -312,23 +352,6 @@ h1 {
 
 .offers {
     background-color: #FFFFFF;
-}
-
-.offers-container h2 {
-    color: #383838;
-    font-size: 40px;
-    line-height: 47px;
-    font-style: normal;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.offers-line {
-    width: 100px;
-    height: 4px;
-    background-color: #F5BD41;
-    display: inline-block;
-    margin-bottom: 80px;
 }
 
 .offered-items {
@@ -682,7 +705,9 @@ h1 {
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #F5BD41;
+    color: #F5BD41;
+    transition: all 1s ease;
 }
 
 .footer li {
@@ -742,19 +767,15 @@ h1 {
         height: 70px;
     }
 
-    .offers-line {
-        display: none;
-    }
-
-    .offers-container {
+    .container {
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
-    .offers-container h2 {
+    .container h2 {
         font-size: 28px;
         line-height: 33px;
-        margin-bottom: 32px;
+        margin-bottom: 45px;
     }
 
     .footer-items-wrapper {
@@ -791,6 +812,40 @@ h1 {
         line-height: 1.143em;
         text-align: center;
     }
+
+    .homes-item img {
+        height: 155px;
+        margin-bottom: 8px;
+    }
+
+    .homes-item p {
+        font-size: 12px;
+        line-height: 1.17em;
+    }
+
+    .arrow-element {
+        height: 28px;
+        width: 28px;
+    }
+
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);
+        transform: translateX(40%);
+    }
+
+    .homes-item-title {
+        margin-bottom: 4px;
+    }
+
+    .homes-item-three {
+        display: none;
+    }
+
+    .homes-item-four {
+        display: none;
+    }
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -827,19 +882,15 @@ h1 {
         height: 70px;
     }
 
-    .offers-line {
-        display: none;
-    }
-
-    .offers-container {
+    .container {
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
-    .offers-container h2 {
+    .container h2 {
         font-size: 28px;
         line-height: 33px;
-        margin-bottom: 32px;
+        margin-bottom: 45px;
     }
 
     .footer-items-wrapper {
@@ -876,6 +927,41 @@ h1 {
         line-height: 1.143em;
         text-align: center;
     }
+
+    .homes-item img {
+        height: 155px;
+        margin-bottom: 8px;
+    }
+
+    .homes-item p {
+        font-size: 12px;
+        line-height: 1.17em;
+    }
+
+    .arrow-element {
+        height: 28px;
+        width: 28px;
+    }
+
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);
+        transform: translateX(10%);
+    }
+
+    .homes-item-title {
+        margin-bottom: 4px;
+    }
+
+    .homes-item-three {
+        display: none;
+    }
+
+    .homes-item-four {
+        display: none;
+    }
+
+
 
 }
 
@@ -913,19 +999,15 @@ h1 {
         height: 85px;
     }
 
-    .offers-line {
-        display: inline-block;
-    }
-
-    .offers-container {
+    .container {
         padding-top: 80px;
         padding-bottom: 80px;
     }
 
-    .offers-container h2 {
+    .container h2 {
         font-size: 34px;
-        line-height: 40px;
-        margin-bottom: 20px;
+        line-height: 1.18em;
+        margin-bottom: 80px;
     }
 
     .footer-item li {
@@ -965,6 +1047,43 @@ h1 {
         transition: 0.5s;
     }
 
+
+    .homes-item img {
+        height: 225px;
+        margin-bottom: 12px;
+    }
+
+    .homes-item p {
+        font-size: 18px;
+        line-height: 1.17em;
+    }
+
+    .arrow-element {
+        height: 34px;
+        width: 34px;
+    }
+
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);
+        transform: translateX(40%);
+    }
+
+    .homes-item-title {
+        margin-bottom: 10px;
+    }
+
+    .homes-item-three {
+        display: flex;
+    }
+
+    .homes-item-four {
+        display: none;
+    }
+
+    .top-section-wrapper {
+        padding-top: 50px;
+    }
 }
 
 @media only screen and (min-width: 1035px) {
@@ -1001,19 +1120,15 @@ h1 {
         height: 100px;
     }
 
-    .offers-line {
-        display: inline-block;
-    }
-
-    .offers-container {
+    .container {
         padding-top: 120px;
         padding-bottom: 120px;
     }
 
-    .offers-container h2 {
+    .container h2 {
         font-size: 40px;
         line-height: 47px;
-        margin-bottom: 20px;
+        margin-bottom: 105px;
     }
 
     .footer-items-wrapper {
@@ -1047,5 +1162,42 @@ h1 {
         text-align: left;
     }
 
+    .homes-item img {
+        height: 300px;
+        margin-bottom: 24px;
+    }
+
+    .homes-item p {
+        font-size: 24px;
+        line-height: 1.17em;
+    }
+
+    .arrow-element {
+        height: 40px;
+        width: 40px;
+    }
+
+    .arrow-homes {
+        right: 0;
+        top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);
+        transform: translateX(60%);
+    }
+
+    .homes-item-title {
+        margin-bottom: 24px;
+    }
+
+    .homes-item-three {
+        display: flex;
+    }
+
+    .homes-item-four {
+        display: flex;
+    }
+
+    .top-section-wrapper {
+        padding-top: 50px;
+    }
 }
+
 

@@ -65,7 +65,7 @@ a {
     transition-delay: .5s;
 }
 
-.order-sections-wrapper {
+.main-sections-wrapper {
     display: flex;
     flex-direction: column;
 }
@@ -1733,6 +1733,8 @@ h1 {
     .sign-up {
         order: 5;
     }
+
+
 }
 
 @media only screen and (min-width: 1035px) {
@@ -1964,6 +1966,10 @@ h1 {
 
     .sign-up {
         order: 5;
+    }
+
+    .top-section {
+        order: 1;
     }
 
 }

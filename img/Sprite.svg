@@ -90,4 +90,14 @@
             <path d="M26 1.4857L24.5144 0L13 11.5143L1.4857 0L0 1.4857L11.5143 13L0 24.5144L1.4857 26L13 14.4857L24.5144 26L26 24.5144L14.4857 13L26 1.4857Z"/>
         </g>
     </symbol>
+    <symbol id="circle-black" viewBox="0 0 8 8">
+        <g>
+            <circle cx="4" cy="4" r="4"/>
+        </g>
+    </symbol>
+    <symbol id="circle-empty" viewBox="0 0 8 8">
+        <g>
+            <circle cx="4" cy="4" r="3.5"/>
+        </g>
+    </symbol>
 </svg>

@@ -7,6 +7,7 @@
     --reviews-img-height: 400px;
     --column-count: 12;
     --container-max-width: 1264px;
+    --best-item-img-w-and-h-md: 226px;
 }
 
 * {
@@ -19,6 +20,10 @@
 html, body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -60,6 +65,11 @@ html, body {
     transition-delay: .5s;
 }
 
+.main-sections-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .top-section {
     background-image: url(../img/Background-image.jpg);
     background-repeat: no-repeat;
@@ -68,6 +78,7 @@ html, body {
     height: 100vh;
     min-height: 900px;
     width: 100%;
+    order: 1;
 }
 
 .top-section-wrapper {
@@ -352,6 +363,7 @@ h1 {
 
 .offers {
     background-color: #FFFFFF;
+    order: 2;
 }
 
 .offered-items {
@@ -384,6 +396,7 @@ h1 {
     background-color: #EAF0F9;
     display: flex;
     flex-direction: column;
+    order: 3;
 }
 
 .homes-title {
@@ -467,6 +480,10 @@ h1 {
     transform: translateX(60%);
 }
 
+.best {
+    order: 4;
+}
+
 .best-nav {
     background-color: #F3F3F4;
     width: 50%;
@@ -505,6 +522,8 @@ h1 {
 
 .best-item {
     width: 25%;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .best-item:not(last-child) {
@@ -514,7 +533,6 @@ h1 {
 .best-item img {
     width: 295px;
     height: 295px;
-    margin-bottom: 24px;
     opacity: 1;
     display: block;
     transition: .5s ease;
@@ -522,11 +540,16 @@ h1 {
 
 }
 
+.best-img-wrapper {
+    position: relative;
+}
+
 .best-img-black {
     background-color: rgba(56, 56, 56, 0.4);
     max-height: 295px;
+    height: 100%;
     z-index: 1;
-    position: relative;
+    display: inline-flex;
 }
 
 .best-hover-btn {
@@ -549,12 +572,21 @@ h1 {
     cursor: pointer;
 }
 
+.best-img-black {
+    display: inline;
+}
+
 .best-img-black:hover .best-item-img {
     opacity: 0.3;
 }
 
 .best-img-black:hover .best-hover-btn {
     opacity: 1;
+}
+
+.best-hover-btn:hover {
+    background-color: #3077C6;
+    color: #FFFFFF;
 }
 
 .best-item-title {
@@ -571,6 +603,10 @@ h1 {
     display: inline-flex;
 }
 
+.sign-up {
+    order: 5;
+}
+
 .sign-up-banner {
     background-color: #EAF0F9;
     max-width: var(--container-max-width);
@@ -580,12 +616,48 @@ h1 {
     position: relative;
 }
 
+.sign-up-hidden-logo {
+    padding: 24px 3px;
+    background-color: #3077C6;
+    border-radius: 8px;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up-logo {
+    width: 53px;
+    height: 11px;
+    fill: #FFFFFF;
+    text-align: center;
+}
+
+.sign-up-hidden-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sign-up-hidden-link a {
+    color: #3077C6;
+    font-size: 14px;
+    line-height: 1.17em;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
 .sign-up-img {
     margin-right: 24px;
 }
 
 .sign-up-content {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .sign-up-text {
@@ -633,6 +705,22 @@ h1 {
     cursor: pointer;
 }
 
+.sign-up-hidden-cross {
+    fill: #BFBFBF;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    margin-right: 16px;
+    display: inline-flex;
+}
+
+
+
+.reviews {
+    background-color: #FFFFFF;
+    order: 6;
+}
+
 .review-title {
     color: #383838;
     font-size: 40px;
@@ -640,10 +728,6 @@ h1 {
     font-style: normal;
     font-weight: 500;
     margin-bottom: 105px;
-}
-
-.reviews {
-    background-color: #FFFFFF;
 }
 
 .review-main-wrapper {
@@ -681,6 +765,12 @@ h1 {
     position: relative;
 }
 
+.review-wrapper-img:hover + .review-item-price{
+    z-index: 1;
+    opacity: 1;
+    transition: all 1s;
+}
+
 .review-item-price {
     background-color: rgba(56, 56, 56, 0.7);
     color: #FFFFFF;
@@ -690,9 +780,10 @@ h1 {
     font-weight: 500;
     padding: 16px 0 11px 24px;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
+    opacity: 0;
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     width: 100%;
 }
 
@@ -834,6 +925,7 @@ h1 {
 .footer {
     background-color: #10367C;
     color: #FFFFFF;
+    order: 7;
 }
 
 .footer-logo {
@@ -1012,6 +1104,131 @@ h1 {
         display: none;
     }
 
+    .best-container {
+        padding-bottom: 0;
+    }
+
+    .best-item-four {
+        display: none;
+    }
+
+    .best-item-three {
+        position: static;
+        display: none;
+    }
+
+    .best-item-img {
+        width: 100%;
+        height: 156px;
+    }
+
+    .best-items-wrap {
+        position: relative;
+    }
+
+    .arrow-best {
+        display: none;
+    }
+
+    .arrow-best-hidden {
+        display: flex;
+        position: absolute;
+        top: 42%;
+        right: 0;
+        z-index: 1;
+        transform: translateX(30%);
+    }
+
+
+    .best-nav {
+        background-color: #FFFFFF;
+        display: flex;
+        border-radius: 8px;
+        margin-bottom: 24px;
+        justify-content: space-between;
+    }
+
+    .best-button-one {
+        padding: 5px 15px;
+    }
+
+    .best-button-two {
+        padding: 5px 25px;
+    }
+
+    .best-button-three {
+        display: none;
+    }
+
+    .best-button-three-hidden {
+        display: flex;
+        padding: 5px 20px;
+        flex-grow: 0;
+    }
+
+    .best-item-title {
+        color: #3077C6;
+        font-size: 12px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 8px;
+    }
+
+    .sign-up-hidden-logo {
+        display: flex;
+        margin-right: 16px;
+    }
+
+    .sign-up-img {
+        display: none;
+    }
+
+    .sign-up-btn {
+        display: none;
+    }
+
+    .sign-up-hidden-link {
+        display: flex;
+    }
+
+    .sign-up-hidden-text {
+        color: #383838;
+        font-size: 12px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    .sign-up-text {
+        display: none;
+    }
+
+    .sign-up-hidden-cross {
+        display: block;
+        align-self: center;
+    }
+
+    .sign-up-cross {
+        display: none;
+    }
+
+    .sign-up-banner {
+        justify-content: center;
+        background-color: #FFFFFF;
+        padding-bottom: 24px;
+        padding-top: 24px;
+    }
+
+    .reviews {
+        order: 5;
+    }
+
+    .sign-up {
+        order: 6;
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1127,8 +1344,143 @@ h1 {
         display: none;
     }
 
+    .best-container {
+        padding-bottom: 0;
+    }
+
+    .best-item-four {
+        display: none;
+    }
+
+    .best-item-three {
+        position: static;
+        display: none;
+    }
+
+    .best-item-img {
+        width: 100%;
+        height: 156px;
+    }
+
+    .best-items-wrap {
+        position: relative;
+    }
+
+    .arrow-best {
+        display: none;
+    }
+
+    .arrow-best-hidden {
+        display: flex;
+        position: absolute;
+        top: 42%;
+        right: 0;
+        z-index: 1;
+        transform: translateX(40%);
+    }
+
+    .best-nav {
+        background-color: #FFFFFF;
+        display: flex;
+        border-radius: 8px;
+        margin-bottom: 24px;
+        justify-content: space-between;
+    }
+
+    .best-button {
+        color: #383838;
+        font-size: 19px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        background-color: #FFFFFF;
+        border: 1px solid #F3F3F4;
+        border-radius: 8px;
+        cursor: pointer;
+    }
 
 
+    .best-button-one {
+        padding: 5px 15px;
+    }
+
+    .best-button-two {
+        padding: 5px 25px;
+    }
+
+    .best-button-three {
+        display: none;
+    }
+
+    .best-button-three-hidden {
+        display: flex;
+        padding: 5px 20px;
+        flex-grow: 0;
+    }
+
+    .best-item-title {
+        color: #3077C6;
+        font-size: 12px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 8px;
+    }
+
+    .sign-up-hidden-logo {
+        display: flex;
+        margin-right: 16px;
+    }
+
+    .sign-up-img {
+        display: none;
+    }
+
+    .sign-up-btn {
+        display: none;
+    }
+
+    .sign-up-hidden-link {
+        display: flex;
+    }
+
+    .sign-up-hidden-text {
+        color: #383838;
+        font-size: 12px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    .sign-up-text {
+        display: none;
+    }
+
+    .sign-up-hidden-cross {
+        display: block;
+        align-self: center;
+    }
+
+    .sign-up-cross {
+        display: none;
+    }
+
+    .sign-up-banner {
+        justify-content: center;
+        background-color: #FFFFFF;
+        padding-bottom: 24px;
+        padding-top: 24px;
+    }
+
+    .reviews {
+        order: 5;
+    }
+
+    .sign-up {
+        order: 6;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1249,6 +1601,140 @@ h1 {
     .top-section-wrapper {
         padding-top: 50px;
     }
+
+
+    .best-item-four {
+        display: none;
+    }
+
+    .best-item-three {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-items-wrap {
+        position: relative;
+    }
+
+    .arrow-best {
+        display: none;
+    }
+
+    .arrow-best-hidden {
+        display: flex;
+        position: absolute;
+        top: 38%;
+        right: 0;
+        z-index: 1;
+        transform: translateX(60%);
+
+    }
+
+    .best-item-img {
+        width: 100%;
+        height: var(--best-item-img-w-and-h-md);
+    }
+
+    .best-nav {
+        background-color: #FFFFFF;
+        display: flex;
+        border-radius: 8px;
+        margin-bottom: 44px;
+        justify-content: space-around;
+    }
+
+    .best-button {
+        color: #383838;
+        font-size: 22px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        background-color: #F3F3F4;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .best-button-one {
+        padding: 14px 34px;
+    }
+
+    .best-button-two {
+        padding: 14px 34px;
+    }
+
+    .best-button-three {
+        padding: 14px 20px;
+        flex-grow: 0;
+        display: flex;
+    }
+
+    .best-button-three-hidden {
+        display: none;
+    }
+
+    .best-item-title {
+        color: #3077C6;
+        font-size: 18px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+
+    .sign-up-hidden-logo {
+        display: none;
+    }
+
+    .sign-up-img {
+        display: flex;
+    }
+
+    .sign-up-btn {
+        display: flex;
+    }
+
+    .sign-up-hidden-link {
+        display: none;
+    }
+
+    .sign-up-text {
+        color: #383838;
+        font-size: 18px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 21px;
+        display: block;
+    }
+
+    .sign-up-hidden-text {
+        display: none;
+    }
+
+    .sign-up-hidden-cross {
+        display: none;
+    }
+
+    .sign-up-cross {
+        display: block;
+    }
+
+    .sign-up-banner {
+        justify-content: flex-start;
+        background-color: #EAF0F9;
+        padding-bottom: 52px;
+        padding-top: 52px;
+    }
+
+    .reviews {
+        order: 6;
+    }
+
+    .sign-up {
+        order: 5;
+    }
+
+
 }
 
 @media only screen and (min-width: 1035px) {
@@ -1363,6 +1849,133 @@ h1 {
     .top-section-wrapper {
         padding-top: 50px;
     }
+
+
+    .best-item-four {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-item-three {
+        display: flex;
+    }
+
+    .arrow-best {
+        transform: rotate(90deg);
+        display: inline-flex;
+        position: static;
+    }
+
+    .arrow-best-hidden {
+        display: none;
+    }
+
+
+    .best-item-img {
+        width: 100%;
+        height: 296px;
+    }
+
+    .best-nav {
+        background-color: #F3F3F4;
+        width: 50%;
+        display: flex;
+        border-radius: 8px;
+        margin-bottom: 64px;
+    }
+
+    .best-button {
+        padding: 17px 52px;
+        color: #383838;
+        font-size: 24px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        background-color: #F3F3F4;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .best-button-three {
+        padding: 17px 25px;
+        flex-grow: 2;
+        display: flex;
+    }
+
+    .best-button-three-hidden {
+        display: none;
+    }
+
+    .best-item-title {
+        color: #3077C6;
+        font-size: 24px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 24px;
+    }
+
+    .sign-up-hidden-logo {
+        display: none;
+    }
+
+    .sign-up-img {
+        display: flex;
+    }
+
+    .sign-up-btn {
+        display: flex;
+    }
+
+    .sign-up-hidden-link {
+       display: none;
+    }
+
+    .sign-up-text {
+        color: #383838;
+        font-size: 24px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 21px;
+        display: block;
+    }
+
+    .sign-up-hidden-text {
+        display: none;
+    }
+
+    .sign-up-hidden-cross {
+        display: none;
+    }
+
+    .sign-up-cross {
+        display: block;
+    }
+
+    .sign-up-banner {
+        justify-content: flex-start;
+        background-color: #EAF0F9;
+        padding-bottom: 52px;
+        padding-top: 52px;
+    }
+
+    .reviews {
+        order: 6;
+    }
+
+    .sign-up {
+        order: 5;
+    }
+
+    .top-section {
+        order: 1;
+    }
+
 }
+
+
+
+
 
 

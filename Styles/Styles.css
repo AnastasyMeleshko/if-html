@@ -187,7 +187,6 @@ h1 {
     margin-top: 145px;
     cursor: pointer;
     width: min(100%, 1224px);
-    max-height: 64px;
     position: relative;
 }
 
@@ -199,22 +198,26 @@ h1 {
     border-radius: 8px;
     border: 3px solid #F3F3F4;
     position: relative;
+    display: flex;
 }
 
 .form-destination > input {
     border-radius: 8px;
     border: 3px solid #F3F3F4;
-    max-width: 472px;
+    max-width: 375px;
     max-height: 71px;
     position: absolute;
     left: -3px;
     top: -3px;
+    cursor: pointer;
 }
 
 .form-destination > label {
     position: absolute;
     top: 22px;
-    left: -462px;
+    left: 24px;
+    display: flex;
+    max-width: 340px;
 }
 
 .form-input:focus ~ .form-label,
@@ -225,16 +228,22 @@ h1 {
     transition: ease 0.3s;
 }
 
-.form-input:focus, .form-numbers:focus {
+.form-input:focus {
     border-color: #F5BD41;
     outline: none;
+}
+
+.form-loupe {
+    fill: #BFBFBF;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
 
 .left-container {
     display: flex;
     justify-content: flex-end;
-    max-width: 760px;
-    max-height: 64px;
+    max-width: 857px;
     position: absolute;
     top: 0;
     right: 0;
@@ -247,7 +256,8 @@ h1 {
 .label-inn {
     position: absolute;
     top: 25px;
-    right: 6px;
+    left: 24px;
+    max-width: 140px;
 }
 
 .check-out {
@@ -257,9 +267,9 @@ h1 {
 .label-out {
     position: absolute;
     top: 25px;
-    left: 0;
+    left: 24px;
+    max-width: 140px;
 }
-
 
 .input-date:focus + .form-label {
     position: absolute;
@@ -271,7 +281,6 @@ h1 {
     display: inline-flex;
     justify-content: flex-start;
     width: 100%;
-    gap: 10px;
     color: #383838;
     font-size: 18px;
     line-height: 21px;
@@ -279,6 +288,7 @@ h1 {
     font-weight: 400;
     border: 3px solid #F3F3F4;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .form-label {
@@ -287,13 +297,15 @@ h1 {
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    transition: 0.5s;
+    transition: ease 0.3s;
     width: 100%;
+    cursor: pointer;
+    display: flex;
  }
 
 
 .form-dates {
-    width: 38%;
+    width: 50%;
     display: flex;
 }
 
@@ -309,14 +321,46 @@ h1 {
     line-height: 21px;
     font-style: normal;
     font-weight: 400;
-    padding: 22px 24px;
     text-align: left;
     background-color: #FFFFFF;
-    border: 3px solid #F3F3F4;
-    border-radius: 8px;
     align-self: flex-start;
-    gap: 5px;
-    width: 45%;
+    width: 50%;
+    position: relative;
+}
+
+.form-numbers-item {
+    width: 33.3333%;
+}
+
+
+.form-adults  > .label-adults {
+    position: absolute;
+    top: 25px;
+    left: 34px;
+}
+
+.label-adults {
+    max-width: 80px;
+}
+
+.form-children  > .label-children {
+    position: absolute;
+    top: 25px;
+    left: 135px;
+}
+
+.label-children {
+    max-width: 80px;
+}
+
+.form-rooms  > .label-rooms {
+    position: absolute;
+    top: 25px;
+    left: 254px;
+}
+
+.label-rooms {
+    max-width: 80px;
 }
 
 .search-button {
@@ -333,7 +377,7 @@ h1 {
     font-weight: 500;
     padding: 20px 57px;
     cursor: pointer;
-    width: 22%;
+    width: 100%;
     max-height: 72px;
 }
 
@@ -343,7 +387,6 @@ h1 {
     transition: .5s;
     border: 3px solid #F5BD41;
 }
-
 
 .header-download-app {
     display: flex;
@@ -1375,6 +1418,160 @@ h1 {
     .review-points-hidden {
         display: inline-flex;
     }
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 857px;
+        max-height: 64px;
+        position: static;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 32px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-destination-hidden > label {
+        position: absolute;
+        bottom: 22px;
+        right: -32px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 8px 0;
+        background-color: #F5BD41;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 64px;
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 32px auto 0;
+        padding-bottom: 40px;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 525px;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 280px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 15px;
+        line-height: 1.17em;
+        border: 3px solid #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1640,6 +1837,7 @@ h1 {
     .arrow-reviews {
         transform: translateX(-10%);
     }
+
     .reviews-container {
         padding-top: 40;
         padding-bottom: 40;
@@ -1681,7 +1879,7 @@ h1 {
         margin-right: 0;
     }
 
-    .review-item-photo{
+    .review-item-photo {
         margin-right: 13px;
     }
 
@@ -1713,16 +1911,170 @@ h1 {
     }
 
     .review-item-message {
-        display:none;
+        display: none;
     }
 
     .review-points-hidden {
         display: inline-flex;
     }
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 857px;
+        max-height: 64px;
+        position: static;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 32px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-destination-hidden > label {
+        position: absolute;
+        bottom: 22px;
+        right: -32px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 8px 0;
+        background-color: #F5BD41;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 64px;
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 32px auto 0;
+        padding-bottom: 40px;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+   .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 525px;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 280px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+   .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 15px;
+        line-height: 1.17em;
+        border: 3px solid #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    /* For medium devices (md) 768px-1035px */
+    /* For medium devices (md) 768px-1210px */
     .col-md-1 {width: calc(100% / var(--column-count) * 1);}
     .col-md-2 {width: calc(100% / var(--column-count) * 2);}
     .col-md-3 {width: calc(100% / var(--column-count) * 3);}
@@ -2056,10 +2408,162 @@ h1 {
     .review-points-hidden {
         display: none;
     }
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 100px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-destination-hidden > label {
+        position: absolute;
+        bottom: 26px;
+        right: -32px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 8px 0;
+        background-color: #F5BD41;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-size: 40px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 80px auto 0;
+        padding-bottom: 40px;
+    }
+
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 525px;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 280px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 15px;
+        line-height: 1.17em;
+        border: 3px solid #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
 }
 
-@media only screen and (min-width: 1035px) {
-    /* For large devices (lg) 1035px - and > */
+
+@media only screen and (min-width: 1210px) {
+    /* For large devices (lg) 1210px - and > */
     .col-lg-1 {width: calc(100% / var(--column-count) * 1);}
     .col-lg-2 {width: calc(100% / var(--column-count) * 2);}
     .col-lg-3 {width: calc(100% / var(--column-count) * 3);}
@@ -2377,11 +2881,160 @@ h1 {
 
     .review-points-hidden {
         display: none;
+        background-color: transparent
+    }
+
+    .form-loupe {
+        display: none;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    .form-destination-hidden {
+        display: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-destination-shown  {
+        display: flex;
+        position: relative;
+
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 849px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-dates {
+        width: 50%;
+        margin: 0;
+    }
+
+    .form-numbers {
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .search-button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-main {
+        margin-top: 145px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    h1 {
+        margin-top: 200px;
+        font-size: 50px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 120px auto 0;
+        padding-bottom: 120px;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .input-date:focus + .form-label {
+        position: absolute;
+        top: -50px;
+        color: #FFFFFF;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 254px;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 134px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: -50px;
+        color: #FFFFFF;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .check-inn {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .check-out {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 18px;
+        line-height: 1.17em;
+        border: 3px solid #F3F3F4;
+        border-radius: 8px;
+        font-weight: 400;
+    }
+
+    .input-adults {
+        border-radius: 8px;
+    }
+
+    .input-children {
+        border-radius: 8px;
+        border: 3px solid #F3F3F4;
+    }
+
+    .input-rooms {
+        border-radius: 8px;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+        max-width: 140px;
     }
 }
-
-
-
 
 
 

@@ -32,38 +32,45 @@
                   <div class="main-header-content">
                       <h1 class="col-lg-12">Discover stays<br>to live, work or just relax</h1>
                               <form action="" class="form-main col-lg-12">
-                                      <div class="form-destination form-item">
+                                      <div class="form-destination form-destination-shown form-item">
                                           <input type="text" id="user-destination" class="form-input input-destination" name="user-destination" required>
                                           <label class="form-label label-destination" for="user-destination">Your destination or hotel name</label>
                                       </div>
                                       <div class="left-container">
+                                          <div class="form-destination-hidden form-item">
+                                              <input type="text" id="user-destination-hidden" class="form-input input-destination" name="user-destination" required>
+                                              <label class="form-label label-destination-hidden" for="user-destination-hidden">
+                                                  <svg class="form-loupe"><use href="./img/Sprite.svg/#loupe"></use></svg>
+                                                  Your destination or hotel name
+                                              </label>
+                                          </div>
                                           <div class="form-dates">
                                               <div class="form-item check-inn">
                                                   <input type="text" class="form-input input-date" name="user-check-in-date" id="form-user-check-in" required>
-                                                  <label class="form-label label-inn" for="form-user-check-in">Check-in</label>
+                                                  <label class="form-label label-inn" for="form-user-check-in">Check-in date</label>
                                               </div>
                                               <div class="form-item check-out">
                                                   <input type="text" class="form-input input-date" name="user-check-out-date" id="form-user-check-out" required>
-                                                  <label class="form-label label-out" for="form-user-check-out">Check-out</label>
+                                                  <label class="form-label label-out" for="form-user-check-out">Check-out date</label>
                                               </div>
                                           </div>
-                                          <div class="form-numbers" tabindex="0">
-                                              <div>
-                                                  <span>2</span>
-                                                  <span>Adults</span>
+                                          <div class="form-numbers">
+                                              <div class="form-adults form-numbers-item">
+                                                  <input type="text" class="form-input input-adults" name="user-adults" id="form-user-adults" required>
+                                                  <label class="form-label label-adults" for="form-user-adults">Adults</label>
                                               </div>
-                                              <span>-</span>
-                                              <div>
-                                                  <span>3</span>
-                                                  <span>Children</span>
+                                              <div class="form-children form-numbers-item">
+                                                  <input type="text" class="form-input input-children" name="user-children" id="form-user-children" required>
+                                                  <label class="form-label label-children" for="form-user-children">Children</label>
                                               </div>
-                                              <span>-</span>
-                                              <div>
-                                                  <span>4</span>
-                                                  <span>Rooms</span>
-                                            </div>
+                                              <div class="form-rooms form-numbers-item">
+                                                  <input type="text" class="form-input input-rooms" name="user-rooms" id="form-user-rooms" required>
+                                                  <label class="form-label label-rooms" for="form-user-rooms">Rooms</label>
+                                              </div>
                                           </div>
-                                      <button class="search-button" name="Search" type="submit">Search</button>
+                                      <div class="search-button-wrap">
+                                          <button class="search-button" name="Search" type="submit">Search</button>
+                                      </div>
                                     </div>
                               </form>
                       <div class="header-download-app col-lg-12">

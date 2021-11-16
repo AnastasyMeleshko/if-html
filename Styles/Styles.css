@@ -163,10 +163,28 @@ a {
     fill: #FFFFFF;
 }
 
+.night-icon:hover {
+    fill: #F5BD41;
+}
+
 .account-icon {
     height: 40px;
     width: 40px;
     fill: #FFFFFF;
+}
+
+.account-icon:hover {
+    fill: #F5BD41;
+}
+
+.hidden-menu-icon {
+    fill: #FFFFFF;
+    width: 24px;
+    height: 16px;
+}
+
+.hidden-menu-icon:hover {
+    fill: #F5BD41;
 }
 
 .header-icons a {
@@ -343,20 +361,29 @@ h1 {
     max-width: 80px;
 }
 
+.form-children {
+    position: relative;
+}
+
 .form-children  > .label-children {
     position: absolute;
     top: 25px;
-    left: 135px;
+    left: 24px;
 }
 
 .label-children {
     max-width: 80px;
 }
 
+.form-rooms {
+    position: relative;
+}
+
+
 .form-rooms  > .label-rooms {
     position: absolute;
     top: 25px;
-    left: 254px;
+    left: 31px;
 }
 
 .label-rooms {
@@ -619,7 +646,7 @@ h1 {
 }
 
 .best-img-black:hover .best-item-img {
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .best-img-black:hover .best-hover-btn {
@@ -1437,6 +1464,8 @@ h1 {
         position: relative;
         padding: 8px 8px 4px 8px;
         background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
     }
 
     .form-destination-shown  {
@@ -1465,7 +1494,7 @@ h1 {
 
     .form-destination-hidden > label {
         position: absolute;
-        bottom: 22px;
+        bottom: 25px;
         right: -32px;
     }
 
@@ -1492,7 +1521,7 @@ h1 {
 
     .header-download-app {
         margin: 32px auto 0;
-        padding-bottom: 40px;
+        padding-bottom: 0;
     }
 
     .form-adults  > .label-adults {
@@ -1501,16 +1530,24 @@ h1 {
         left: 34px;
     }
 
+    .form-rooms {
+        position: relative;
+    }
+
     .form-rooms  > .label-rooms {
         position: absolute;
         top: 25px;
-        left: 525px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
     }
 
     .form-children  > .label-children {
         position: absolute;
         top: 25px;
-        left: 280px;
+        left: 25px;
     }
 
     .form-input:focus ~ .form-label,
@@ -1521,9 +1558,19 @@ h1 {
         transition: ease 0.3s;
     }
 
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 14px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
     .search-button-wrap {
         padding: 8px;
         background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
     }
 
     .check-inn {
@@ -1571,6 +1618,25 @@ h1 {
         top: 25px;
         left: 31px;
         max-width: 140px;
+    }
+
+    .header-line-block {
+        display: none;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .hidden-menu-icon {
+        display: flex;
+    }
+
+    .top-section {
+        order: 1;
+        height: 100%;
+        min-height: 530px;
     }
 }
 
@@ -1936,6 +2002,8 @@ h1 {
         position: relative;
         padding: 8px 8px 4px 8px;
         background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
     }
 
     .form-destination-shown  {
@@ -1964,8 +2032,8 @@ h1 {
 
     .form-destination-hidden > label {
         position: absolute;
-        bottom: 22px;
-        right: -32px;
+        bottom: 25px;
+        right: -35px;
     }
 
     .search-button {
@@ -1991,7 +2059,7 @@ h1 {
 
     .header-download-app {
         margin: 32px auto 0;
-        padding-bottom: 40px;
+        padding-bottom: 0;
     }
 
     .form-adults  > .label-adults {
@@ -2000,16 +2068,24 @@ h1 {
         left: 34px;
     }
 
+    .form-rooms {
+        position: relative;
+    }
+
    .form-rooms  > .label-rooms {
         position: absolute;
         top: 25px;
-        left: 525px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
     }
 
     .form-children  > .label-children {
         position: absolute;
         top: 25px;
-        left: 280px;
+        left: 25px;
     }
 
     .form-input:focus ~ .form-label,
@@ -2020,9 +2096,20 @@ h1 {
         transition: ease 0.3s;
     }
 
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 14px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+
    .search-button-wrap {
         padding: 8px;
         background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
     }
 
     .check-inn {
@@ -2070,6 +2157,25 @@ h1 {
         top: 25px;
         left: 31px;
         max-width: 140px;
+    }
+
+    .header-line-block {
+        display: none;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .hidden-menu-icon {
+        display: flex;
+    }
+
+    .top-section {
+        order: 1;
+        height: 100%;
+        min-height: 530px;
     }
 }
 
@@ -2422,8 +2528,10 @@ h1 {
     .form-destination-hidden {
         width: 100%;
         position: relative;
-        padding: 8px 8px 4px 8px;
+        padding: 16px 16px 4px 16px;
         background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
     }
 
     .form-destination-shown  {
@@ -2453,7 +2561,8 @@ h1 {
     .form-destination-hidden > label {
         position: absolute;
         bottom: 26px;
-        right: -32px;
+        right: -42px;
+        transition: all ease 0.3s;
     }
 
     .search-button {
@@ -2462,7 +2571,7 @@ h1 {
 
     .form-numbers {
         width: 100%;
-        padding: 0 8px 0;
+        padding: 0 16px 0;
         background-color: #F5BD41;
     }
 
@@ -2485,19 +2594,27 @@ h1 {
     .form-adults  > .label-adults {
         position: absolute;
         top: 25px;
-        left: 34px;
+        left: 43px;
+    }
+
+    .form-rooms {
+        position: relative;
     }
 
     .form-rooms  > .label-rooms {
         position: absolute;
         top: 25px;
-        left: 525px;
+        left: 25px;
+    }
+
+    .form-children {
+        position: relative;
     }
 
     .form-children  > .label-children {
         position: absolute;
         top: 25px;
-        left: 280px;
+        left: 25px;
     }
 
     .form-input:focus ~ .form-label,
@@ -2508,18 +2625,28 @@ h1 {
         transition: ease 0.3s;
     }
 
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 21px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
     .search-button-wrap {
-        padding: 8px;
+        padding: 8px 16px 16px 16px;
         background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
     }
 
     .check-inn {
-        padding: 4px 4px 8px 8px;
+        padding: 4px 4px 8px 16px;
         background-color: #F5BD41;
     }
 
     .check-out {
-        padding: 4px 8px 8px 4px;
+        padding: 4px 16px 8px 4px;
         background-color: #F5BD41;
     }
 
@@ -2549,7 +2676,7 @@ h1 {
     .label-inn {
         position: absolute;
         top: 25px;
-        left: 34px;
+        left: 42px;
         max-width: 140px;
     }
 
@@ -2558,6 +2685,25 @@ h1 {
         top: 25px;
         left: 31px;
         max-width: 140px;
+    }
+
+    .header-line-block {
+        display: inline-flex;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hidden-menu-icon {
+        display: none;
+    }
+
+    .top-section {
+        order: 1;
+        height: 100vh;
+        min-height: 900px;
     }
 }
 
@@ -2795,6 +2941,8 @@ h1 {
 
     .top-section {
         order: 1;
+        height: 100vh;
+        min-height: 900px;
     }
 
     .review-item-three {
@@ -2964,16 +3112,24 @@ h1 {
         color: #FFFFFF;
     }
 
+    .form-rooms {
+        position: relative;
+    }
+
     .form-rooms  > .label-rooms {
         position: absolute;
         top: 25px;
-        left: 254px;
+        left: 31px;
+    }
+
+    .form-children {
+        position: relative;
     }
 
     .form-children  > .label-children {
         position: absolute;
         top: 25px;
-        left: 134px;
+        left: 24px;
     }
 
     .form-input:focus ~ .form-label,
@@ -3034,6 +3190,20 @@ h1 {
         left: 24px;
         max-width: 140px;
     }
+
+    .header-line-block {
+        display: inline-flex;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hidden-menu-icon {
+        display: none;
+    }
+
 }
 
 

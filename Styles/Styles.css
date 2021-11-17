@@ -163,10 +163,28 @@ a {
     fill: #FFFFFF;
 }
 
+.night-icon:hover {
+    fill: #F5BD41;
+}
+
 .account-icon {
     height: 40px;
     width: 40px;
     fill: #FFFFFF;
+}
+
+.account-icon:hover {
+    fill: #F5BD41;
+}
+
+.hidden-menu-icon {
+    fill: #FFFFFF;
+    width: 24px;
+    height: 16px;
+}
+
+.hidden-menu-icon:hover {
+    fill: #F5BD41;
 }
 
 .header-icons a {
@@ -187,7 +205,6 @@ h1 {
     margin-top: 145px;
     cursor: pointer;
     width: min(100%, 1224px);
-    max-height: 64px;
     position: relative;
 }
 
@@ -199,22 +216,26 @@ h1 {
     border-radius: 8px;
     border: 3px solid #F3F3F4;
     position: relative;
+    display: flex;
 }
 
 .form-destination > input {
     border-radius: 8px;
     border: 3px solid #F3F3F4;
-    max-width: 472px;
+    max-width: 375px;
     max-height: 71px;
     position: absolute;
     left: -3px;
     top: -3px;
+    cursor: pointer;
 }
 
 .form-destination > label {
     position: absolute;
     top: 22px;
-    left: -462px;
+    left: 24px;
+    display: flex;
+    max-width: 340px;
 }
 
 .form-input:focus ~ .form-label,
@@ -225,16 +246,22 @@ h1 {
     transition: ease 0.3s;
 }
 
-.form-input:focus, .form-numbers:focus {
+.form-input:focus {
     border-color: #F5BD41;
     outline: none;
+}
+
+.form-loupe {
+    fill: #BFBFBF;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
 
 .left-container {
     display: flex;
     justify-content: flex-end;
-    max-width: 760px;
-    max-height: 64px;
+    max-width: 857px;
     position: absolute;
     top: 0;
     right: 0;
@@ -247,7 +274,8 @@ h1 {
 .label-inn {
     position: absolute;
     top: 25px;
-    right: 6px;
+    left: 24px;
+    max-width: 140px;
 }
 
 .check-out {
@@ -257,9 +285,9 @@ h1 {
 .label-out {
     position: absolute;
     top: 25px;
-    left: 0;
+    left: 24px;
+    max-width: 140px;
 }
-
 
 .input-date:focus + .form-label {
     position: absolute;
@@ -271,7 +299,6 @@ h1 {
     display: inline-flex;
     justify-content: flex-start;
     width: 100%;
-    gap: 10px;
     color: #383838;
     font-size: 18px;
     line-height: 21px;
@@ -279,6 +306,7 @@ h1 {
     font-weight: 400;
     border: 3px solid #F3F3F4;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .form-label {
@@ -287,13 +315,15 @@ h1 {
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    transition: 0.5s;
+    transition: ease 0.3s;
     width: 100%;
+    cursor: pointer;
+    display: flex;
  }
 
 
 .form-dates {
-    width: 38%;
+    width: 50%;
     display: flex;
 }
 
@@ -309,14 +339,55 @@ h1 {
     line-height: 21px;
     font-style: normal;
     font-weight: 400;
-    padding: 22px 24px;
     text-align: left;
     background-color: #FFFFFF;
-    border: 3px solid #F3F3F4;
-    border-radius: 8px;
     align-self: flex-start;
-    gap: 5px;
-    width: 45%;
+    width: 50%;
+    position: relative;
+}
+
+.form-numbers-item {
+    width: 33.3333%;
+}
+
+
+.form-adults  > .label-adults {
+    position: absolute;
+    top: 25px;
+    left: 34px;
+}
+
+.label-adults {
+    max-width: 80px;
+}
+
+.form-children {
+    position: relative;
+}
+
+.form-children  > .label-children {
+    position: absolute;
+    top: 25px;
+    left: 24px;
+}
+
+.label-children {
+    max-width: 80px;
+}
+
+.form-rooms {
+    position: relative;
+}
+
+
+.form-rooms  > .label-rooms {
+    position: absolute;
+    top: 25px;
+    left: 31px;
+}
+
+.label-rooms {
+    max-width: 80px;
 }
 
 .search-button {
@@ -333,7 +404,7 @@ h1 {
     font-weight: 500;
     padding: 20px 57px;
     cursor: pointer;
-    width: 22%;
+    width: 100%;
     max-height: 72px;
 }
 
@@ -343,7 +414,6 @@ h1 {
     transition: .5s;
     border: 3px solid #F5BD41;
 }
-
 
 .header-download-app {
     display: flex;
@@ -531,7 +601,6 @@ h1 {
 }
 
 .best-item img {
-    width: 295px;
     height: 295px;
     opacity: 1;
     display: block;
@@ -577,7 +646,7 @@ h1 {
 }
 
 .best-img-black:hover .best-item-img {
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .best-img-black:hover .best-hover-btn {
@@ -733,6 +802,7 @@ h1 {
 .review-main-wrapper {
     display: flex;
     justify-content: center;
+
 }
 
 .reviews-items {
@@ -759,10 +829,27 @@ h1 {
 
 .review-item {
     background-color: #EAF0F9;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .review-main-wrap {
     position: relative;
+    display: inline-flex;
+    max-height: 400px;
+    height: 100%;
+
+}
+
+.review-wrapper-img {
+    display: inline-flex;
+    width: 100%;
+}
+
+.review-item-img {
+    height: 400px;
+    display: inline-flex;
+    width: 100%;
 }
 
 .review-wrapper-img:hover + .review-item-price{
@@ -783,7 +870,7 @@ h1 {
     z-index: -1;
     opacity: 0;
     left: 0;
-    bottom: 5px;
+    bottom: 0;
     width: 100%;
 }
 
@@ -863,10 +950,9 @@ h1 {
 }
 
 .review-item-icon {
-    height: 54px;
-    width: 54px;
+    height: 64px;
+    width: 64px;
     fill: #BFBFBF;
-    margin-right: 5px;
 }
 
 .review-item-person {
@@ -903,7 +989,6 @@ h1 {
 
 .review-item-country img {
     height: 13px;
-
 }
 
 .flag-icon {
@@ -917,9 +1002,36 @@ h1 {
     justify-content: flex-start;
 }
 
-.review-item-message {
+.review-message-wrapper p {
     text-align: left;
-    margin: 0 24px 24px 24px;
+    color: #383838;
+    font-size: 18px;
+    line-height: 1.17em;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.review-circle-black {
+    fill: #333333;
+}
+
+.review-circle-empty{
+    fill: none;
+    stroke: #333333;
+}
+
+.review-points-hidden {
+    display: inline-flex;
+}
+
+.review-circle {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+}
+
+.review-circle:not(last-child) {
+    margin-right: 8px;
 }
 
 .footer {
@@ -1089,7 +1201,7 @@ h1 {
     .arrow-homes {
         right: 0;
         top: calc((var(--homes-img-height) - var(--homes-arrow-height)) / 2);
-        transform: translateX(40%);
+        transform: translateX(10%);
     }
 
     .homes-item-title {
@@ -1136,9 +1248,8 @@ h1 {
         top: 42%;
         right: 0;
         z-index: 1;
-        transform: translateX(30%);
+        transform: translateX(-25%);
     }
-
 
     .best-nav {
         background-color: #FFFFFF;
@@ -1147,6 +1258,19 @@ h1 {
         margin-bottom: 24px;
         justify-content: space-between;
     }
+
+    .best-button {
+        color: #383838;
+        font-size: 19px;
+        line-height: 1.17em;
+        font-style: normal;
+        font-weight: 400;
+        background-color: #FFFFFF;
+        border: 1px solid #F3F3F4;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
 
     .best-button-one {
         padding: 5px 15px;
@@ -1164,6 +1288,7 @@ h1 {
         display: flex;
         padding: 5px 20px;
         flex-grow: 0;
+        transform: translateX(-15%);
     }
 
     .best-item-title {
@@ -1228,6 +1353,290 @@ h1 {
 
     .sign-up {
         order: 6;
+    }
+
+    .review-item-three {
+        display: none;
+    }
+
+    .review-item-two {
+        display: none;
+    }
+
+    .arrow-reviews {
+        transform: translateX(-10%);
+    }
+    .reviews-container {
+        padding-top: 40;
+        padding-bottom: 40;
+        background-color: #EAF0F9;
+    }
+
+    .review-title-hidden {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .review-title {
+        display: none;
+    }
+
+    .review-item-place {
+        font-size: 18px;
+        line-height: 1.17em;
+        margin: 24px 0 16px 24px;
+    }
+
+    .review-item-place {
+        font-size: 15px;
+        line-height: 1.17em;
+        margin: 12px 0 8px 0;
+    }
+
+    .review-item-location {
+        font-size: 15px;
+        line-height: 1.17em;
+        margin: 0 0 12px 0;
+    }
+
+    .review-item-rating {
+        margin: 12px 0 5px 0;
+    }
+
+    .review-item-reviews {
+        margin-right: 0;
+    }
+
+    .review-item-photo{
+        margin-right: 13px;
+    }
+
+    .review-item-icon {
+        height: 52px;
+        width: 52px;
+    }
+
+    .review-item-name {
+        font-size: 15px;
+        line-height: 1.17em;
+        margin-bottom: 4px;
+    }
+
+    .review-item-country p {
+        font-size: 15px;
+        line-height: 1.17em;
+    }
+
+    .review-item-visitor {
+        margin: 0 0 17px 0;
+    }
+
+    .review-item-message-hidden {
+        margin: 0 0 32px 0;
+        font-size: 15px;
+        line-height: 1.17em;
+        display: flex;
+    }
+
+    .review-item-message {
+        display:none;
+    }
+
+    .review-points-hidden {
+        display: inline-flex;
+    }
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 857px;
+        max-height: 64px;
+        position: static;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 32px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-destination-hidden > label {
+        position: absolute;
+        bottom: 25px;
+        right: -32px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 8px 0;
+        background-color: #F5BD41;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 64px;
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 32px auto 0;
+        padding-bottom: 0;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 14px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 15px;
+        line-height: 1.17em;
+        border: 3px solid #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
+
+    .header-line-block {
+        display: none;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .hidden-menu-icon {
+        display: flex;
+    }
+
+    .top-section {
+        order: 1;
+        height: 100%;
+        min-height: 530px;
     }
 }
 
@@ -1376,7 +1785,7 @@ h1 {
         top: 42%;
         right: 0;
         z-index: 1;
-        transform: translateX(40%);
+        transform: translateX(-25%);
     }
 
     .best-nav {
@@ -1416,6 +1825,7 @@ h1 {
         display: flex;
         padding: 5px 20px;
         flex-grow: 0;
+        transform: translateX(-15%);
     }
 
     .best-item-title {
@@ -1481,10 +1891,296 @@ h1 {
     .sign-up {
         order: 6;
     }
+
+    .review-item-three {
+        display: none;
+    }
+
+    .review-item-two {
+        display: none;
+    }
+
+    .arrow-reviews {
+        transform: translateX(-10%);
+    }
+
+    .reviews-container {
+        padding-top: 40;
+        padding-bottom: 40;
+        background-color: #EAF0F9;
+    }
+
+    .review-title-hidden {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .review-title {
+        display: none;
+    }
+
+    .review-item-place {
+        font-size: 18px;
+        line-height: 1.17em;
+        margin: 24px 0 16px 24px;
+    }
+
+    .review-item-place {
+        font-size: 15px;
+        line-height: 1.17em;
+        margin: 12px 0 8px 0;
+    }
+
+    .review-item-location {
+        font-size: 15px;
+        line-height: 1.17em;
+        margin: 0 0 12px 0;
+    }
+
+    .review-item-rating {
+        margin: 12px 0 5px 0;
+    }
+
+    .review-item-reviews {
+        margin-right: 0;
+    }
+
+    .review-item-photo {
+        margin-right: 13px;
+    }
+
+    .review-item-icon {
+        height: 52px;
+        width: 52px;
+    }
+
+    .review-item-name {
+        font-size: 15px;
+        line-height: 1.17em;
+        margin-bottom: 4px;
+    }
+
+    .review-item-country p {
+        font-size: 15px;
+        line-height: 1.17em;
+    }
+
+    .review-item-visitor {
+        margin: 0 0 17px 0;
+    }
+
+    .review-item-message-hidden {
+        margin: 0 0 32px 0;
+        font-size: 15px;
+        line-height: 1.17em;
+        display: flex;
+    }
+
+    .review-item-message {
+        display: none;
+    }
+
+    .review-points-hidden {
+        display: inline-flex;
+    }
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 857px;
+        max-height: 64px;
+        position: static;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 8px 8px 4px 8px;
+        background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 32px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-destination-hidden > label {
+        position: absolute;
+        bottom: 25px;
+        right: -35px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 8px 0;
+        background-color: #F5BD41;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 64px;
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 32px auto 0;
+        padding-bottom: 0;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+   .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 26px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 14px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+
+   .search-button-wrap {
+        padding: 8px;
+        background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 8px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 8px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 15px;
+        line-height: 1.17em;
+        border: 3px solid #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
+
+    .header-line-block {
+        display: none;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .hidden-menu-icon {
+        display: flex;
+    }
+
+    .top-section {
+        order: 1;
+        height: 100%;
+        min-height: 530px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    /* For medium devices (md) 768px-1035px */
+    /* For medium devices (md) 768px-1210px */
     .col-md-1 {width: calc(100% / var(--column-count) * 1);}
     .col-md-2 {width: calc(100% / var(--column-count) * 2);}
     .col-md-3 {width: calc(100% / var(--column-count) * 3);}
@@ -1626,7 +2322,7 @@ h1 {
         top: 38%;
         right: 0;
         z-index: 1;
-        transform: translateX(60%);
+        transform: translateX(5%);
 
     }
 
@@ -1734,11 +2430,286 @@ h1 {
         order: 5;
     }
 
+    .review-item-three {
+        display: none;
+    }
 
+    .review-item-two {
+        display: flex;
+    }
+
+    .arrow-reviews {
+        transform: translateX(-10%);
+    }
+    .reviews-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: #FFFFFF;
+    }
+
+    .review-title-hidden {
+        display: none;
+    }
+
+    .review-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .review-item-place {
+        font-size: 17px;
+        line-height: 1.17em;
+        margin: 18px 0 12px 24px;
+    }
+
+    .review-item-location {
+        font-size: 17px;
+        line-height: 1.17em;
+        margin: 0 0 18px 24px;
+    }
+
+    .review-item-rating {
+        margin: 18px 24px 7px 0;
+    }
+
+    .review-item-reviews {
+        margin-right: 24px;
+    }
+
+    .review-item-photo{
+        margin-right: 15px;
+    }
+
+    .review-item-icon {
+        height: 56px;
+        width: 56px;
+    }
+
+    .review-item-name {
+        font-size: 17px;
+        line-height: 1.17em;
+        margin-bottom: 6px;
+    }
+
+    .review-item-country p {
+        font-size: 17px;
+        line-height: 1.17em;
+    }
+
+    .review-item-visitor {
+        margin: 0 0 17px 24px;
+    }
+
+    .review-item-message {
+        margin: 0 24px 28px 24px;
+        font-size: 17px;
+        line-height: 1.17em;
+        display: flex;
+    }
+
+    .review-item-message-hidden {
+        display:none;
+    }
+
+    .review-points-hidden {
+        display: none;
+    }
+
+    .form-loupe {
+        display: inline-flex;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .form-destination-hidden {
+        width: 100%;
+        position: relative;
+        padding: 16px 16px 4px 16px;
+        background-color: #F5BD41;
+        border-top-right-radius: 8px 8px;
+        border-top-left-radius: 8px 8px;
+    }
+
+    .form-destination-shown  {
+        display: none;
+
+    }
+
+    .form-destination {
+        display: none;
+    }
+
+    .left-container {
+        display: inline-flex;
+        justify-content: flex-end;
+        max-width: 857px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .form-main {
+        margin-top: 100px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    .form-destination-hidden > label {
+        position: absolute;
+        bottom: 26px;
+        right: -42px;
+        transition: all ease 0.3s;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .form-numbers {
+        width: 100%;
+        padding: 0 16px 0;
+        background-color: #F5BD41;
+    }
+
+    .form-dates {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 80px;
+        font-size: 40px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 80px auto 0;
+        padding-bottom: 40px;
+    }
+
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 43px;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: 5px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .input-destination:focus ~ .label-destination-hidden,
+    .input-destination:valid + .label-destination-hidden {
+        position: absolute;
+        top: 21px;
+        color: #383838;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 8px 16px 16px 16px;
+        background-color: #F5BD41;
+        border-bottom-right-radius: 8px 8px;
+        border-bottom-left-radius: 8px 8px;
+    }
+
+    .check-inn {
+        padding: 4px 4px 8px 16px;
+        background-color: #F5BD41;
+    }
+
+    .check-out {
+        padding: 4px 16px 8px 4px;
+        background-color: #F5BD41;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 15px;
+        line-height: 1.17em;
+        border: 3px solid #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .input-adults {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-children {
+        border-radius: 0;
+        border-right: 2px solid #BFBFBF;
+        border-left: 2px solid #BFBFBF;
+    }
+
+    .input-rooms {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 42px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+        max-width: 140px;
+    }
+
+    .header-line-block {
+        display: inline-flex;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hidden-menu-icon {
+        display: none;
+    }
+
+    .top-section {
+        order: 1;
+        height: 100vh;
+        min-height: 900px;
+    }
 }
 
-@media only screen and (min-width: 1035px) {
-    /* For large devices (lg) 1035px - and > */
+
+@media only screen and (min-width: 1210px) {
+    /* For large devices (lg) 1210px - and > */
     .col-lg-1 {width: calc(100% / var(--column-count) * 1);}
     .col-lg-2 {width: calc(100% / var(--column-count) * 2);}
     .col-lg-3 {width: calc(100% / var(--column-count) * 3);}
@@ -1970,12 +2941,270 @@ h1 {
 
     .top-section {
         order: 1;
+        height: 100vh;
+        min-height: 900px;
+    }
+
+    .review-item-three {
+        display: flex;
+    }
+
+    .review-item-two {
+        display: flex;
+    }
+
+    .arrow-reviews {
+        transform: translateX(50%);
+    }
+
+    .reviews-container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: #FFFFFF;
+    }
+
+    .review-title-hidden {
+        display: none;
+    }
+
+    .review-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .review-item-place {
+        font-size: 18px;
+        line-height: 1.17em;
+        margin: 24px 0 16px 24px;
+    }
+
+    .review-item-location {
+        font-size: 18px;
+        line-height: 1.17em;
+        margin: 0 0 24px 24px;
+    }
+
+    .review-item-rating {
+        margin: 24px 24px 8px 0;
+    }
+
+    .review-item-reviews {
+        margin-right: 24px;
+    }
+
+    .review-item-photo{
+        margin-right: 16px;
+    }
+
+    .review-item-icon {
+        height: 64px;
+        width: 64px;
+    }
+
+    .review-item-name {
+        font-size: 18px;
+        line-height: 1.17em;
+        margin-bottom: 8px;
+    }
+
+    .review-item-country p {
+        font-size: 18px;
+        line-height: 1.17em;
+    }
+
+    .review-item-visitor {
+        margin: 0 0 17px 24px;
+    }
+
+    .review-item-message {
+        margin: 0 24px 24px 24px;
+        font-size: 18px;
+        line-height: 1.17em;
+        display: flex;
+    }
+
+    .review-item-message-hidden {
+        display:none;
+    }
+
+    .review-points-hidden {
+        display: none;
+        background-color: transparent
+    }
+
+    .form-loupe {
+        display: none;
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    .form-destination-hidden {
+        display: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-destination-shown  {
+        display: flex;
+        position: relative;
+
+    }
+
+    .left-container {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 849px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-dates {
+        width: 50%;
+        margin: 0;
+    }
+
+    .form-numbers {
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .search-button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-main {
+        margin-top: 145px;
+        cursor: pointer;
+        width: min(100%, 1224px);
+        background-color: transparent;
+    }
+
+    h1 {
+        margin-top: 200px;
+        font-size: 50px;
+        line-height: 1.2em;
+    }
+
+    .header-download-app {
+        margin: 120px auto 0;
+        padding-bottom: 120px;
+    }
+
+    .form-adults  > .label-adults {
+        position: absolute;
+        top: 25px;
+        left: 34px;
+    }
+
+    .input-date:focus + .form-label {
+        position: absolute;
+        top: -50px;
+        color: #FFFFFF;
+    }
+
+    .form-rooms {
+        position: relative;
+    }
+
+    .form-rooms  > .label-rooms {
+        position: absolute;
+        top: 25px;
+        left: 31px;
+    }
+
+    .form-children {
+        position: relative;
+    }
+
+    .form-children  > .label-children {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:valid + .form-label {
+        position: absolute;
+        top: -50px;
+        color: #FFFFFF;
+        transition: ease 0.3s;
+    }
+
+    .search-button-wrap {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .check-inn {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .check-out {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-input {
+        color: #383838;
+        font-size: 18px;
+        line-height: 1.17em;
+        border: 3px solid #F3F3F4;
+        border-radius: 8px;
+        font-weight: 400;
+    }
+
+    .input-adults {
+        border-radius: 8px;
+    }
+
+    .input-children {
+        border-radius: 8px;
+        border: 3px solid #F3F3F4;
+    }
+
+    .input-rooms {
+        border-radius: 8px;
+    }
+
+    .label-inn {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+        max-width: 140px;
+    }
+
+    .label-out {
+        position: absolute;
+        top: 25px;
+        left: 24px;
+        max-width: 140px;
+    }
+
+    .header-line-block {
+        display: inline-flex;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hidden-menu-icon {
+        display: none;
     }
 
 }
-
-
-
 
 
 

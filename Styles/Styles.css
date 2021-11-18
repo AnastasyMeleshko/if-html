@@ -1367,8 +1367,8 @@ h1 {
         transform: translateX(-10%);
     }
     .reviews-container {
-        padding-top: 40;
-        padding-bottom: 40;
+        padding-top: 40px;
+        padding-bottom: 40px;
         background-color: #EAF0F9;
     }
 
@@ -1492,12 +1492,6 @@ h1 {
         background-color: transparent;
     }
 
-    .form-destination-hidden > label {
-        position: absolute;
-        bottom: 25px;
-        right: -32px;
-    }
-
     .search-button {
         width: 100%;
     }
@@ -1563,6 +1557,15 @@ h1 {
         position: absolute;
         top: 14px;
         color: #383838;
+        transform: translateY(-3px);
+        transition: transform ease 0.3s;
+    }
+
+    .label-destination-hidden {
+        position: absolute;
+        bottom: 25px;
+        left: 35px;
+        max-width: 300px;
         transition: ease 0.3s;
     }
 
@@ -1905,8 +1908,8 @@ h1 {
     }
 
     .reviews-container {
-        padding-top: 40;
-        padding-bottom: 40;
+        padding-top: 40px;
+        padding-bottom: 40px;
         background-color: #EAF0F9;
     }
 
@@ -2030,12 +2033,6 @@ h1 {
         background-color: transparent;
     }
 
-    .form-destination-hidden > label {
-        position: absolute;
-        bottom: 25px;
-        right: -35px;
-    }
-
     .search-button {
         width: 100%;
     }
@@ -2093,7 +2090,7 @@ h1 {
         position: absolute;
         top: 5px;
         color: #383838;
-        transition: ease 0.3s;
+        transition: all ease 0.3s;
     }
 
     .input-destination:focus ~ .label-destination-hidden,
@@ -2101,9 +2098,17 @@ h1 {
         position: absolute;
         top: 14px;
         color: #383838;
-        transition: ease 0.3s;
+        transform: translateY(-3px);
+        transition: transform ease 0.3s;
     }
 
+    .label-destination-hidden {
+        position: absolute;
+        bottom: 25px;
+        left: 35px;
+        max-width: 550px;
+        transition: all ease 0.3s;
+    }
 
    .search-button-wrap {
         padding: 8px;
@@ -2236,7 +2241,7 @@ h1 {
     }
 
     .footer-item li:not(:first-child) {
-        display: display: flex;
+        display: flex;
         transition: 0.5s;
     }
 
@@ -2558,12 +2563,7 @@ h1 {
         background-color: transparent;
     }
 
-    .form-destination-hidden > label {
-        position: absolute;
-        bottom: 26px;
-        right: -42px;
-        transition: all ease 0.3s;
-    }
+
 
     .search-button {
         width: 100%;
@@ -2622,7 +2622,7 @@ h1 {
         position: absolute;
         top: 5px;
         color: #383838;
-        transition: ease 0.3s;
+        transition: all ease 0.3s;
     }
 
     .input-destination:focus ~ .label-destination-hidden,
@@ -2630,7 +2630,16 @@ h1 {
         position: absolute;
         top: 21px;
         color: #383838;
-        transition: ease 0.3s;
+        transform: translateY(-3px);
+        transition: transform ease 0.3s;
+    }
+
+    .label-destination-hidden {
+        position: absolute;
+        bottom: 26px;
+        left: 42px;
+        transition: all ease 0.3s;
+        max-width: 600px;
     }
 
     .search-button-wrap {

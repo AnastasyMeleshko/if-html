@@ -221,7 +221,6 @@ h1 {
 
 .form-destination > input {
     border-radius: 8px;
-    border: 3px solid #F3F3F4;
     max-width: 375px;
     max-height: 71px;
     position: absolute;
@@ -247,7 +246,6 @@ h1 {
 }
 
 .form-input:focus {
-    border-color: #F5BD41;
     outline: none;
 }
 
@@ -304,7 +302,6 @@ h1 {
     line-height: 21px;
     font-style: normal;
     font-weight: 400;
-    border: 3px solid #F3F3F4;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -323,12 +320,23 @@ h1 {
 
 
 .form-dates {
-    width: 50%;
     display: flex;
 }
 
 .form-dates .form-item {
     width: 50%;
+}
+
+.main-numbers-wrap {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    width: 30%;
+    background-color: #FFFFFF;
+}
+
+.form-numbers-wrap {
+    width: 100%;
 }
 
 .form-numbers {
@@ -342,8 +350,8 @@ h1 {
     text-align: left;
     background-color: #FFFFFF;
     align-self: flex-start;
-    width: 50%;
     position: relative;
+    width: 100%;
 }
 
 .form-numbers-item {
@@ -536,7 +544,7 @@ h1 {
 }
 
 .arrow-icon {
-    height: 15px;
+    height: 21px;
     stroke: #383838;
     stroke-width: 2;
     fill: none;
@@ -606,7 +614,6 @@ h1 {
     display: block;
     transition: .5s ease;
     backface-visibility: hidden;
-
 }
 
 .best-img-wrapper {
@@ -782,8 +789,6 @@ h1 {
     margin-right: 16px;
     display: inline-flex;
 }
-
-
 
 .reviews {
     background-color: #FFFFFF;
@@ -1499,7 +1504,33 @@ h1 {
     .form-numbers {
         width: 100%;
         padding: 0 8px 0;
+        background-color: #FFFFFF;
+        height: 50px;
+    }
+
+    .main-numbers-wrap {
         background-color: #F5BD41;
+        padding: 0 8px 0;
+        width: 100%;
+        max-height: 67px;
+
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        max-height: 67px;
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 50px;
+        padding: 5px 24px;
+    }
+
+    .form-numbers-item {
+        max-height: 67px;
     }
 
     .form-dates {
@@ -1544,12 +1575,20 @@ h1 {
         left: 25px;
     }
 
-    .form-input:focus ~ .form-label,
-    .form-input:valid + .form-label {
+    .input-date:focus ~ .form-label,
+    .input-date:valid + .form-label {
         position: absolute;
         top: 5px;
         color: #383838;
-        transition: ease 0.3s;
+        transition: all ease 0.3s;
+    }
+
+    .numbers-input:focus ~ .form-label,
+    .numbers-input:valid + .form-label {
+        position: absolute;
+        top: -5px;
+        color: #383838;
+        transition: all ease 0.3s;
     }
 
     .input-destination:focus ~ .label-destination-hidden,
@@ -1564,9 +1603,13 @@ h1 {
     .label-destination-hidden {
         position: absolute;
         bottom: 25px;
-        left: 35px;
+        left: 55px;
         max-width: 300px;
         transition: ease 0.3s;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 45px;
     }
 
     .search-button-wrap {
@@ -1640,6 +1683,12 @@ h1 {
         order: 1;
         height: 100%;
         min-height: 530px;
+    }
+
+    .form-img-loupe {
+        position: absolute;
+        top: 36px;
+        left: 32px;
     }
 }
 
@@ -2011,7 +2060,6 @@ h1 {
 
     .form-destination-shown  {
         display: none;
-
     }
 
     .form-destination {
@@ -2037,10 +2085,36 @@ h1 {
         width: 100%;
     }
 
-    .form-numbers {
-        width: 100%;
-        padding: 0 8px 0;
+    .main-numbers-wrap {
         background-color: #F5BD41;
+        padding: 0 8px 0;
+        width: 100%;
+        max-height: 67px;
+
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        max-height: 67px;
+    }
+
+    .form-numbers {
+        background-color: #FFFFFF;
+        height: 50px;
+        padding: 0 8px 0;
+        width: 100%;
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 50px;
+        padding: 5px 24px;
+    }
+
+    .form-numbers-item {
+        max-height: 67px;
     }
 
     .form-dates {
@@ -2085,10 +2159,18 @@ h1 {
         left: 25px;
     }
 
-    .form-input:focus ~ .form-label,
-    .form-input:valid + .form-label {
+    .input-date:focus ~ .form-label,
+    .input-date:valid + .form-label {
         position: absolute;
         top: 5px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .numbers-input:focus ~ .form-label,
+    .numbers-input:valid + .form-label {
+        position: absolute;
+        top: -5px;
         color: #383838;
         transition: all ease 0.3s;
     }
@@ -2105,9 +2187,13 @@ h1 {
     .label-destination-hidden {
         position: absolute;
         bottom: 25px;
-        left: 35px;
+        left: 55px;
         max-width: 550px;
         transition: all ease 0.3s;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 45px;
     }
 
    .search-button-wrap {
@@ -2181,6 +2267,12 @@ h1 {
         order: 1;
         height: 100%;
         min-height: 530px;
+    }
+
+    .form-img-loupe {
+        position: absolute;
+        top: 36px;
+        left: 32px;
     }
 }
 
@@ -2539,9 +2631,18 @@ h1 {
         border-top-left-radius: 8px 8px;
     }
 
+    .form-destination-hidden > input {
+        padding-left: 49px;
+    }
+
+    .form-img-loupe {
+        position: absolute;
+        top: 41px;
+        left: 40px;
+    }
+
     .form-destination-shown  {
         display: none;
-
     }
 
     .form-destination {
@@ -2563,16 +2664,38 @@ h1 {
         background-color: transparent;
     }
 
-
-
     .search-button {
         width: 100%;
     }
 
-    .form-numbers {
-        width: 100%;
-        padding: 0 16px 0;
+    .main-numbers-wrap {
         background-color: #F5BD41;
+        padding: 0 16px 0;
+        width: 100%;
+        max-height: 67px;
+
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        max-height: 67px;
+    }
+
+    .form-numbers {
+        background-color: #FFFFFF;
+        height: 50px;
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 50px;
+        padding: 5px 24px;
+    }
+
+    .form-numbers-item {
+        max-height: 67px;
     }
 
     .form-dates {
@@ -2590,11 +2713,10 @@ h1 {
         padding-bottom: 40px;
     }
 
-
     .form-adults  > .label-adults {
         position: absolute;
         top: 25px;
-        left: 43px;
+        left: 35px;
     }
 
     .form-rooms {
@@ -2604,7 +2726,7 @@ h1 {
     .form-rooms  > .label-rooms {
         position: absolute;
         top: 25px;
-        left: 25px;
+        left: 26px;
     }
 
     .form-children {
@@ -2617,10 +2739,18 @@ h1 {
         left: 25px;
     }
 
-    .form-input:focus ~ .form-label,
-    .form-input:valid + .form-label {
+    .input-date:focus ~ .form-label,
+    .input-date:valid + .form-label {
         position: absolute;
-        top: 5px;
+        top: 3px;
+        color: #383838;
+        transition: all ease 0.3s;
+    }
+
+    .numbers-input:focus ~ .form-label,
+    .numbers-input:valid + .form-label {
+        position: absolute;
+        top: -7px;
         color: #383838;
         transition: all ease 0.3s;
     }
@@ -2636,8 +2766,8 @@ h1 {
 
     .label-destination-hidden {
         position: absolute;
-        bottom: 26px;
-        left: 42px;
+        bottom: 27px;
+        left: 67px;
         transition: all ease 0.3s;
         max-width: 600px;
     }
@@ -2714,6 +2844,7 @@ h1 {
         height: 100vh;
         min-height: 900px;
     }
+
 }
 
 
@@ -3075,12 +3206,11 @@ h1 {
     }
 
     .form-dates {
-        width: 50%;
         margin: 0;
     }
 
     .form-numbers {
-        width: 50%;
+        width: 100%;
         margin: 0;
         padding: 0;
         background-color: transparent;
@@ -3168,7 +3298,6 @@ h1 {
         color: #383838;
         font-size: 18px;
         line-height: 1.17em;
-        border: 3px solid #F3F3F4;
         border-radius: 8px;
         font-weight: 400;
     }
@@ -3179,7 +3308,7 @@ h1 {
 
     .input-children {
         border-radius: 8px;
-        border: 3px solid #F3F3F4;
+        border: 3px solid transparent;
     }
 
     .input-rooms {
@@ -3212,6 +3341,35 @@ h1 {
     .hidden-menu-icon {
         display: none;
     }
+
+    .form-input:focus {
+        border-color: #F5BD41;
+        outline: none;
+    }
+
+    .form-destination-hidden > input {
+        padding-left: 0;
+    }
+
+    .main-numbers-wrap {
+        background-color: #FFFFFF;
+        padding: 0;
+        width: 100%;
+        max-height: 72px;
+    }
+
+    .form-numbers-wrap {
+        width: 100%;
+        padding: 0;
+        border-radius: 8px;
+
+    }
+
+    .input-adults, .input-children, .input-rooms {
+        height: 71px;
+        padding: 22px 24px;
+    }
+
 
 }
 
